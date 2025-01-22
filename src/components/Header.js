@@ -19,7 +19,7 @@ function Header() {
         </div>
         <div className="contact-item">
           <span role="img" aria-label="location">📍</span>
-          <span>New York City, NY</span>
+          <span className="paper-font">New York City, NY</span>
         </div>
       </div>
     </header>

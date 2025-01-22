@@ -3,6 +3,8 @@ body {
   background: #f0f0f0;
   margin: 0;
   padding: 0;
+  font-family: 'Neucha', cursive;
+  color: #41403e;
 }
 
 .sheet {
@@ -11,12 +13,30 @@ body {
   position: relative;
   box-sizing: border-box;
   page-break-after: always;
-  background: white;
+  background: #ffffff;
   margin-top: 3mm;
   width: 280mm;
   min-height: auto;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.05),
+    0 2px 4px rgba(0,0,0,0.05),
+    0 4px 8px rgba(0,0,0,0.05),
+    0 8px 16px rgba(0,0,0,0.05),
+    0 16px 32px rgba(0,0,0,0.05);
+  background-image: linear-gradient(
+    0deg,
+    transparent 24%,
+    rgba(0, 0, 0, 0.02) 25%,
+    rgba(0, 0, 0, 0.02) 26%,
+    transparent 27%,
+    transparent 74%,
+    rgba(0, 0, 0, 0.02) 75%,
+    rgba(0, 0, 0, 0.02) 76%,
+    transparent 77%,
+    transparent
+  );
+  background-size: 28px 28px;
 }
 
 .paper-container {
@@ -24,16 +44,17 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background: #f0f0f0;
+  background: #f5f5f5;
   max-width: 280mm;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 /* Override Paper.css defaults for our layout */
 .paper-content {
   padding: 1.5rem;
-  background: white;
-  border-radius: 4px;
+  background: transparent;
+  border-radius: 0;
   max-width: 230mm;
   margin: 0 auto;
   min-height: 80vh;
@@ -55,6 +76,10 @@ body {
   display: flex;
   align-items: center;
   gap: 2mm;
+}
+
+.contact-item span[role="img"] {
+  font-size: 1.2em;
 }
 
 .section {
@@ -97,12 +122,15 @@ body {
   font-weight: bold;
   font-size: 1.2em;
   color: #333;
+  font-family: 'Neucha', cursive;
 }
 
 .position {
   font-style: italic;
   color: #666;
   margin-bottom: 2mm;
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
 }
 
 .skills-grid {
@@ -122,11 +150,14 @@ body {
   margin: 0 0 2mm 0;
   padding-bottom: 1mm;
   border-bottom: 0.2mm dashed #ccc;
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   color: #41403e;
+  font-family: 'Neucha', cursive;
 }
 
 h2 {
@@ -179,9 +210,10 @@ a:hover {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background: #f0f0f0;
+  background: #f5f5f5;
   max-width: 280mm;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .introduction {
@@ -226,10 +258,11 @@ a:hover {
 }
 
 .lead {
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 1.8;
   margin-bottom: 1rem;
   color: #2c3e50;
+  font-family: 'Neucha', cursive;
 }
 
 .intro-text p {
@@ -237,6 +270,7 @@ a:hover {
   line-height: 1.8;
   margin-bottom: 0.75rem;
   color: #41403e;
+  font-family: 'Neucha', cursive;
 }
 
 .quick-facts {
@@ -272,6 +306,7 @@ a:hover {
   border-bottom: none;
   padding-bottom: 0;
   font-weight: 600;
+  font-family: 'Neucha', cursive;
 }
 
 .quick-facts .card-subtitle {
@@ -279,6 +314,7 @@ a:hover {
   color: #41403e;
   margin: 0;
   padding: 0.5rem 0;
+  font-family: 'Neucha', cursive;
 }
 
 .quick-facts .card-text {
@@ -286,6 +322,7 @@ a:hover {
   color: #666;
   margin: 0;
   line-height: 1.6;
+  font-family: 'Neucha', cursive;
 }
 
 .timeline-container {
@@ -329,6 +366,7 @@ a:hover {
   padding-right: 20px;
   color: #666;
   white-space: nowrap;
+  font-family: 'Neucha', cursive;
 }
 
 .timeline-marker {
@@ -359,12 +397,15 @@ a:hover {
   margin: 0 0 0.5rem 0;
   color: #2c3e50;
   font-size: 1.1em;
+  font-family: 'Neucha', cursive;
 }
 
 .timeline-content p {
   margin: 0;
   color: #666;
   line-height: 1.5;
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
 }
 
 .timeline-item.education .timeline-date {
@@ -511,6 +552,8 @@ p {
   cursor: pointer;
   background: white;
   transition: all 0.2s;
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
 }
 
 .nav-tab:hover {
@@ -690,6 +733,7 @@ p {
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 0.5rem;
+  font-family: 'Neucha', cursive;
 }
 
 .experience-item .position {
@@ -697,6 +741,7 @@ p {
   color: #666;
   font-style: italic;
   margin-bottom: 1rem;
+  font-family: 'Neucha', cursive;
 }
 
 .experience-item ul {
@@ -710,6 +755,8 @@ p {
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.5;
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
 }
 
 .experience-item ul li::before {
@@ -728,4 +775,98 @@ p {
   .experience-item ul li {
     padding-left: 1rem;
   }
+}
+
+/* Add Paper.css typography styles */
+.paper-font {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
+  color: #41403e;
+}
+
+/* Global Paper.css typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Neucha', cursive;
+  color: #41403e;
+}
+
+/* Update specific components */
+.lead {
+  font-family: 'Neucha', cursive;
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #2c3e50;
+}
+
+.intro-text p {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.quick-facts .card-title {
+  font-family: 'Neucha', cursive;
+  font-size: 1.2rem;
+}
+
+.quick-facts .card-subtitle {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1rem;
+}
+
+.quick-facts .card-text {
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
+}
+
+.experience-item .company {
+  font-family: 'Neucha', cursive;
+  font-size: 1.2rem;
+}
+
+.experience-item .position {
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
+}
+
+.experience-item ul li {
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
+}
+
+.timeline-date {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
+}
+
+.timeline-content h3 {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
+}
+
+.timeline-content p {
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
+}
+
+.nav-tab {
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
+}
+
+.skill-category h4 {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
+}
+
+.skill-category ul li {
+  font-family: 'Neucha', cursive;
+  font-size: 1rem;
+}
+
+/* Contact info */
+.contact-item a, 
+.contact-item span:not([role="img"]) {
+  font-family: 'Neucha', cursive;
+  font-size: 1.1em;
 }
