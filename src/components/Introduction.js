@@ -2,6 +2,24 @@ import React from 'react';
 import profileImage from '../assets/profile.png'; // Changed from .jpg to .png
 
 function Introduction() {
+  const quickFacts = [
+    {
+      title: 'Current Focus',
+      subtitle: '🎯 Android Development',
+      text: 'Building innovative mobile experiences at Captions.ai'
+    },
+    {
+      title: 'Interests',
+      subtitle: '🎵 Arts & Creation',
+      text: 'Content Creator | Singing, Hip-hop Dancing, Running | Electronic & Chinese Music Enthusiast'
+    },
+    {
+      title: 'Impact',
+      subtitle: '🌟 User Growth',
+      text: '2.5M+ new users acquired through features'
+    }
+  ];
+
   return (
     <section className="section introduction">
       <h2>
@@ -30,33 +48,17 @@ function Introduction() {
         </div>
       </div>
       <div className="quick-facts">
-        <div className="card">
-          <div className="card-body">
-            <h4 className="card-title">Current Focus</h4>
-            <h5 className="card-subtitle">🎯 Android Development</h5>
-            <p className="card-text">
-              Building innovative mobile experiences at Captions.ai
-            </p>
+        {quickFacts.map((card, index) => (
+          <div className="card" key={index}>
+            <div className="card-body">
+              <h4 className="card-title">{card.title}</h4>
+              <h5 className="card-subtitle">{card.subtitle}</h5>
+              <p className="card-text">
+                {card.text}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <h4 className="card-title">Interests</h4>
-            <h5 className="card-subtitle">🎵 Arts & Creation</h5>
-            <p className="card-text">
-              Content Creator | Singing, Hip-hop Dancing, Running | Electronic & Chinese Music Enthusiast
-            </p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-body">
-            <h4 className="card-title">Impact</h4>
-            <h5 className="card-subtitle">🌟 User Growth</h5>
-            <p className="card-text">
-              2.5M+ new users acquired through features
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -1,26 +1,27 @@
 import React from 'react';
 
 function Header() {
+  const contactItems = [
+    { icon: '📞', label: 'phone', content: '+1-608-949-0772', href: 'tel:+16089490772' },
+    { icon: '📧', label: 'email', content: 'jinyuwu6@gmail.com', href: 'mailto:jinyuwu6@gmail.com' },
+    { icon: '🌐', label: 'linkedin', content: 'LinkedIn', href: 'http://www.linkedin.com/in/jwu427' },
+    { icon: '📍', label: 'location', content: 'New York City, NY' }
+  ];
+
   return (
     <header>
       <h1>Jinyu Wu</h1>
       <div className="contact-info">
-        <div className="contact-item">
-          <span role="img" aria-label="phone">📞</span>
-          <a href="tel:+16089490772">+1-608-949-0772</a>
-        </div>
-        <div className="contact-item">
-          <span role="img" aria-label="email">📧</span>
-          <a href="mailto:jinyuwu6@gmail.com">jinyuwu6@gmail.com</a>
-        </div>
-        <div className="contact-item">
-          <span role="img" aria-label="linkedin">🌐</span>
-          <a href="http://www.linkedin.com/in/jwu427">LinkedIn</a>
-        </div>
-        <div className="contact-item">
-          <span role="img" aria-label="location">📍</span>
-          <span className="paper-font">New York City, NY</span>
-        </div>
+        {contactItems.map((item, index) => (
+          <div key={index} className="contact-item">
+            <span role="img" aria-label={item.label}>{item.icon}</span>
+            {item.href ? (
+              <a href={item.href}>{item.content}</a>
+            ) : (
+              <span className="paper-font">{item.content}</span>
+            )}
+          </div>
+        ))}
       </div>
     </header>
   );
