@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../assets/profile.png'; // Changed from .jpg to .png
 
 function Introduction() {
   return (
@@ -8,7 +9,11 @@ function Introduction() {
       </h2>
       <div className="intro-section">
         <div className="profile-image">
-          <div className="image-placeholder"></div>
+          <img 
+            src={profileImage} 
+            alt="Jinyu Wu"
+            className="profile-img"
+          />
         </div>
         <div className="intro-text">
           <p className="lead">

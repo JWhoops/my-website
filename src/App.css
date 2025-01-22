@@ -200,13 +200,17 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-.image-placeholder {
+.profile-img {
   width: 180px;
   height: 180px;
-  background: #f8f9fa;
+  object-fit: cover;
   border-radius: 8px;
   border: 2px solid #ddd;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-placeholder {
+  display: none;
 }
 
 .intro-text {
