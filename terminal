@@ -1,0 +1,4 @@
+npx create-react-app personal-website
+cd personal-website
+npm uninstall @papercss/papercss
+npm install web-vitals 
