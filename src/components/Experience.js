@@ -3,9 +3,19 @@ import React from 'react';
 function Experience() {
   const experiences = [
     {
+      company: "Captions",
+      position: "Software Engineer, Android",
+      period: "Jun 2024 - Present",
+      location: "New York City, NY",
+      emoji: "🎥", // Video/caption emoji
+      achievements: [
+        "Building innovative mobile experiences at Captions"
+      ]
+    },
+    {
       company: "Snap Inc.",
       position: "Software Engineer, Android",
-      period: "Oct 2021 - Present",
+      period: "Oct 2021 - Apr 2024",
       location: "Remote",
       emoji: "👻", // Snapchat ghost emoji
       achievements: [

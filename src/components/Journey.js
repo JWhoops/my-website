@@ -28,8 +28,8 @@ function Journey() {
     },
     {
       year: 'Present',
-      title: 'Android Developer at Captions.ai',
-      description: 'Building innovative mobile experiences at Captions.ai',
+      title: 'Android Developer at Captions',
+      description: 'Building innovative mobile experiences at Captions',
       type: 'work'
     }
   ].reverse();

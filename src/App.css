@@ -360,13 +360,12 @@ a:hover {
   top: 0;
   width: 80px;
   text-align: right;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: 'Neucha', cursive;
   font-size: 1.1em;
   font-weight: 600;
   padding-right: 20px;
   color: #666;
   white-space: nowrap;
-  font-family: 'Neucha', cursive;
 }
 
 .timeline-marker {
@@ -388,9 +387,7 @@ a:hover {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-left: 20px;
-  width: calc(100% - 40px);
-  min-height: 100px;
-  box-sizing: border-box;
+  flex: 1;
 }
 
 .timeline-content h3 {
@@ -463,21 +460,36 @@ a:hover {
   }
 
   .timeline::before {
-    left: 60px;
+    left: 30px;
   }
 
   .timeline-item {
-    padding-left: 80px;
+    padding-left: 50px;
+    margin-top: 35px;
   }
 
   .timeline-date {
-    width: 50px;
-    font-size: 1em;
-    padding-right: 10px;
+    left: 0;
+    top: -30px;
+    width: auto;
+    text-align: left;
+    padding: 2px 8px;
+    background: white;
+    border-radius: 4px;
+    z-index: 2;
+    transform: translateX(-10px);
   }
 
   .timeline-marker {
-    left: 60px;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+  }
+
+  .timeline-content {
+    margin-left: 10px;
+    padding: 1rem;
   }
 
   .projects-grid,
@@ -534,6 +546,7 @@ p {
   color: #333;
 }
 
+/* Navigation styles */
 .paper-nav {
   display: flex;
   gap: 10px;
@@ -541,8 +554,9 @@ p {
   padding: 0.75rem;
   background: white;
   border-radius: 4px;
-  overflow-x: auto;
   border: 1px solid #ddd;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .nav-tab {
@@ -554,6 +568,10 @@ p {
   transition: all 0.2s;
   font-family: 'Neucha', cursive;
   font-size: 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-tab:hover {
@@ -565,6 +583,22 @@ p {
   background: #41403e;
   color: white;
   border-color: #41403e;
+}
+
+/* Update media queries for vertical layout */
+@media (max-width: 768px) {
+  .paper-nav {
+    flex-direction: column;
+    padding: 0.75rem;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-tab {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+  }
 }
 
 /* Update card styles to remove paper-css decorative borders */
@@ -869,4 +903,29 @@ h1, h2, h3, h4, h5, h6 {
 .contact-item span:not([role="img"]) {
   font-family: 'Neucha', cursive;
   font-size: 1.1em;
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+    margin-top: 30px;
+  }
+
+  .timeline-marker {
+    left: 20px;
+  }
+
+  .timeline-date {
+    transform: translateX(-5px);
+  }
+
+  .timeline-content {
+    margin-left: 5px;
+    padding: 0.75rem;
+  }
 }

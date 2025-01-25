@@ -6,7 +6,7 @@ function Introduction() {
     {
       title: 'Current Focus',
       subtitle: '🎯 Android Development',
-      text: 'Building innovative mobile experiences at Captions.ai'
+      text: 'Building innovative mobile experiences at Captions'
     },
     {
       title: 'Interests',
@@ -35,7 +35,7 @@ function Introduction() {
         </div>
         <div className="intro-text">
           <p className="lead">
-            I'm a passionate Android Developer currently crafting mobile experiences at Captions.ai. 
+            I'm a passionate Android Developer currently crafting mobile experiences at Captions. 
             With a journey that spans from UW-Madison to Snap Inc., I've been fortunate to work 
             on products that impact millions of users daily.
           </p>
