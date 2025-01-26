@@ -230,15 +230,42 @@ a:hover {
 .profile-image {
   flex: 0 0 180px;
   margin-top: 0.5rem;
+  position: relative;
+  padding: 3px;
+  background: white;
+  border: 1px solid #41403e;
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease;
+}
+
+.profile-image::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid #41403e;
+  transform: rotate(1deg);
+  z-index: -1;
+  background: white;
 }
 
 .profile-img {
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #41403e;
+  transform: rotate(1deg);
+  transition: transform 0.2s ease;
+}
+
+.profile-image:hover {
+  transform: rotate(1deg);
+}
+
+.profile-image:hover .profile-img {
+  transform: rotate(-1deg);
 }
 
 .image-placeholder {
