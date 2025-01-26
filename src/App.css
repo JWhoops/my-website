@@ -573,58 +573,60 @@ p {
   color: #333;
 }
 
-/* Navigation styles */
+/* Update navigation styles */
 .paper-nav {
-  display: flex;
-  gap: 10px;
+  border-bottom: 2px solid #41403e;
   margin-bottom: 1.5rem;
-  padding: 0.75rem;
-  background: white;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
 }
 
 .nav-tab {
-  padding: 8px 16px;
-  border: 2px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  background: white;
-  transition: all 0.2s;
+  border: none;
+  background: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0;
+  position: relative;
   font-family: 'Neucha', cursive;
   font-size: 1rem;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  color: #41403e;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
 }
 
 .nav-tab:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.05);
+  transform: none;
+  box-shadow: none;
 }
 
 .nav-tab.active {
-  background: #41403e;
-  color: white;
-  border-color: #41403e;
+  border-bottom: 2px solid #41403e;
+  background: none;
+  color: #41403e;
 }
 
-/* Update media queries for vertical layout */
+/* Mobile styles */
 @media (max-width: 768px) {
   .paper-nav {
-    flex-direction: column;
-    padding: 0.75rem;
-    gap: 8px;
-    width: 100%;
+    border: 2px solid #41403e;
+    border-radius: 4px;
+    padding: 0.5rem;
   }
 
   .nav-tab {
     width: 100%;
-    justify-content: flex-start;
-    padding: 10px;
+    text-align: left;
+    border: none;
+    border-radius: 4px;
+    margin: 0.2rem 0;
+  }
+
+  .nav-tab.active {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
   }
 }
 
@@ -954,5 +956,104 @@ h1, h2, h3, h4, h5, h6 {
   .timeline-content {
     margin-left: 5px;
     padding: 0.75rem;
+  }
+}
+
+/* Update navigation styles */
+nav.border {
+  margin-bottom: 1.5rem;
+}
+
+nav .nav-brand {
+  display: none; /* Hide the empty nav-brand */
+}
+
+nav .collapsible-body ul.inline {
+  margin: 0;
+  padding: 0;
+}
+
+nav .collapsible-body ul.inline li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #41403e;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+nav .collapsible-body ul.inline li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+nav .collapsible-body ul.inline li a.active {
+  border-bottom: 3px solid #41403e;
+  font-weight: bold;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav .collapsible-body ul.inline li {
+    padding-left: 0; /* Remove left padding */
+  }
+
+  nav .collapsible-body ul.inline li a {
+    padding-left: 0; /* Align to the left */
+    border-left: none; /* Remove left border */
+  }
+
+  nav .collapsible-body ul.inline li a.active {
+    background: rgba(0, 0, 0, 0.05); /* Use background instead of border */
+    border-left: none;
+    padding-left: 1rem;
+    border-radius: 4px;
+  }
+}
+
+/* Fix collapsible button clickable area */
+nav .collapsible input[type="checkbox"]:checked + label {
+  z-index: 1000;
+}
+
+nav .collapsible-body {
+  z-index: 999;
+}
+
+/* Add more spacing between collapse button and nav options */
+nav .collapsible label {
+  margin-bottom: 35px;
+  display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav .collapsible label {
+    margin-bottom: 40px;
+  }
+
+  nav .collapsible input[type="checkbox"]:checked ~ .collapsible-body ul.inline {
+    padding-top: 40px;
+  }
+}
+
+/* Hide collapse button on desktop */
+@media (min-width: 769px) {
+  nav .collapsible label,
+  nav .collapsible input[type="checkbox"] {
+    display: none;
+  }
+
+  nav .collapsible-body {
+    display: block;
+  }
+}
+
+/* Show collapse button only on mobile */
+@media (max-width: 768px) {
+  nav .collapsible label {
+    display: block;
+    margin-bottom: 15px;
   }
 }
